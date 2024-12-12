@@ -21,9 +21,20 @@ const formSlice = createSlice({
     name: 'form',
     initialState,
     reducers: {
-        submitUserInfo: (state, action) => {},
-        submitPlanInfo: (state, action) => {},
-        submitAddOnsInfo: (state, action) => {},
+        submitUserInfo: (state, action) => {
+            state.user.name = action.payload.name;
+            state.user.email = action.payload.email;
+            state.user.phone = action.payload.phone;
+        },
+        submitPlanInfo: (state, action) => {
+            state.plan.plan = action.payload.plan;
+            state.plan.yearly = action.payload.yearly;
+        },
+        submitAddOnsInfo: (state, action) => {
+            state.addOns.onlineService = action.payload.onlineService;
+            state.addOns.largerStorage = action.payload.largerStorage;
+            state.addOns.customizableProfile = action.payload.customizableProfile;
+        },
     },
 });
 
