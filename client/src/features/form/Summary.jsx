@@ -1,16 +1,19 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navigation from "./Navigation";
 import './formStep.css';
 
 const Summary = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const plan = useSelector(state => state.form.plan);
     const addOns = useSelector(state => state.form.addOns);
     console.log(plan);
     console.log(addOns);
     
-    
+    const handleBackButtonClick = () => {
+        navigate('/addons');
+    };
 
     return (
         <>
@@ -25,8 +28,8 @@ const Summary = () => {
     
                     </div>
                     <div className="formControlsContainer">
-                        <Link to='/addons'>Go Back</Link>
-                        <button>Confirm</button>
+                        <button onClick={handleBackButtonClick} className="backButton">Go Back</button>
+                        <button className="confirmButton">Confirm</button>
                     </div>
                 </div>
             </div>     

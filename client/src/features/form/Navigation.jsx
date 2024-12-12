@@ -1,7 +1,6 @@
 import './navigation.css';
 
 const Navigation = ({step}) => {
-    console.log(step);
     const stepNumberArr = [1, 2, 3, 4];
     const stepDescArr = ['YOUR INFO', 'SELECT PLAN', 'ADD-ONS', 'SUMMARY'];
     

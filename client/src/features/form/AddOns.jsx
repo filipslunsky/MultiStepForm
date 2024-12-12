@@ -1,13 +1,22 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { submitAddOnsInfo } from './state/slice.js';
 import Navigation from "./Navigation";
 import './formStep.css';
 
 const AddOns = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const addOns = useSelector(state => state.form.addOns);
     console.log(addOns);
     
+    const handleBackButtonClick = () => {
+        navigate('/plan');
+    };
+
+    const handleNextButtonClick = () => {
+        navigate('/summary');
+    };
 
     return (
         <>
@@ -22,8 +31,8 @@ const AddOns = () => {
     
                     </div>
                     <div className="formControlsContainer">
-                        <Link to='/plan'>Go Back</Link>
-                        <Link to='/summary'>Next</Link>
+                        <button onClick={handleBackButtonClick} className="backButton">Go Back</button>
+                        <button onClick={handleNextButtonClick} className="nextButton">Next</button>
                     </div>
                 </div>
             </div>   
