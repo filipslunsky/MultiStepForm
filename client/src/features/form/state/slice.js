@@ -7,7 +7,7 @@ const initialState = {
         phone: "",
     },
     plan: {
-        plan: "",
+        plan: "arcade",
         yearly: false,
     },
     addOns: {
