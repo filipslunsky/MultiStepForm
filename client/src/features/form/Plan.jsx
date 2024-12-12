@@ -16,10 +16,6 @@ const Plan = () => {
     const [selectedPlan, setSelectedPlan] = useState(plan.plan);
     const [selectedYearly, setSelectedYearly] = useState(plan.yearly);
 
-    console.log(plan);
-    console.log(selectedPlan);
-    console.log(selectedYearly);
-
     const handleSelctArcade = () => {
         setSelectedPlan('arcade');
     };
@@ -59,8 +55,11 @@ const Plan = () => {
                         <h4>You have the option of monthly or yearly billing.</h4>
                     </div>
                     <div className="formFieldsContainer">
-                        <div className="selectItemsContainer">
-                            <div onClick={handleSelctArcade} className="selectItem">
+                        <div className="planItemsContainer">
+                            <div
+                            onClick={handleSelctArcade}
+                            className={selectedPlan === "arcade" ? "planItem selectedPlanItem" : "planItem"}
+                            >
                                 <img src={arcadeIcon} alt="arcade icon" />
                                 <h5>Arcade</h5>
                                 {
@@ -76,7 +75,10 @@ const Plan = () => {
                                     </div>
                                 }
                             </div>
-                            <div onClick={handleSelectAdvanced} className="selectItem">
+                            <div
+                            onClick={handleSelectAdvanced}
+                            className={selectedPlan === "advanced" ? "planItem selectedPlanItem" : "planItem"}
+                            >
                                 <img src={advancedIcon} alt="advanced icon" />
                                 <h5>Advanced</h5>
                                 {
@@ -92,7 +94,10 @@ const Plan = () => {
                                     </div>
                                 }
                             </div>
-                            <div onClick={handleSelectPro} className="selectItem">
+                            <div
+                            onClick={handleSelectPro}
+                            className={selectedPlan === "pro" ? "planItem selectedPlanItem" : "planItem"}
+                            >
                                 <img src={proIcon} alt="pro icon" />
                                 <h5>Pro</h5>
                                 {
