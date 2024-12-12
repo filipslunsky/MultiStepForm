@@ -16,9 +16,27 @@ const Summary = () => {
 
     const [selectSubmitted, setSelectSubmitted] = useState(submitted);
 
+    const getFullPrice = () => {
+        let fullPrice = plan.planPrice;
+        if (addOns.onlineService) {
+            fullPrice += 1;
+        }
+        if (addOns.largerStorage) {
+            fullPrice += 2
+        };
+        if (addOns.customizableProfile) {
+            fullPrice += 2
+        };
+        return fullPrice;
+    };
+
+    const fullPrice = getFullPrice();
+
     console.log(plan);
     console.log(addOns);
     console.log(selectSubmitted);
+    console.log(fullPrice);
+    
 
     const handleSubmit = () => {
         setSelectSubmitted(true);
@@ -50,10 +68,52 @@ const Summary = () => {
                                 <h3 className='summaryPlanPrice'>
                                     ${plan.planPrice}{plan.yearly ? '0' : ''}/{plan.yearly ? 'yr' : 'mo'}
                                 </h3>
-                                
+                                {
+                                    addOns.onlineService
+                                    ?
+                                    <div className="summaryAddOnItemContainer">
+                                        <h4 className='summaryAddOnItemName'>Online service</h4>
+                                        <p className='summaryAddOnItemPrice'>
+                                            {
+                                                plan.yearly ? '+$10/yr' : '+$1/mo'
+                                            }
+                                        </p>
+                                    </div>
+                                    :
+                                    ''
+                                }
+                                {
+                                    addOns.largerStorage
+                                    ?
+                                    <div className="summaryAddOnItemContainer">
+                                        <h4 className='summaryAddOnItemName'>Larger storage</h4>
+                                        <p className='summaryAddOnItemPrice'>
+                                            {
+                                                plan.yearly ? '+$20/yr' : '+$2/mo'
+                                            }
+                                        </p>
+                                    </div>
+                                    :
+                                    ''
+                                }
+                                {
+                                    addOns.customizableProfile
+                                    ?
+                                    <div className="summaryAddOnItemContainer">
+                                        <h4 className='summaryAddOnItemName'>Customizable profile</h4>
+                                        <p className='summaryAddOnItemPrice'>
+                                            {
+                                                plan.yearly ? '+$20/yr' : '+$2/mo'
+                                            }
+                                        </p>
+                                    </div>
+                                    :
+                                    ''
+                                }
                             </div>
                             <div className="summaryBottomLine">
-
+                                <h4 className='summaryBottomTitle'>Total ({plan.yearly ? 'per year' : 'per month'})</h4>
+                                <p className='summaryBottomPrice'>${fullPrice}{plan.yearly ? '0' : ''}/{plan.yearly ? 'yr' : 'mo'}</p>
                             </div>
                         </div>
                         <div className="formControlsContainer">
