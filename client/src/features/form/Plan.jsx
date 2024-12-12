@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import Navigation from "./Navigation";
 import './formStep.css';
 
 const Plan = () => {
@@ -11,36 +12,21 @@ const Plan = () => {
     return (
         <>
             <div className="mainFormContainer">
-                <div className="navigationContainer">
-                    <div className="navigationStepContainer">
-                        <div className="stepDescriptionContainer">                            
-                        </div>
-                    </div>
-                    <div className="navigationStepContainer">
-                        <div className="stepDescriptionContainer">                            
-                        </div>
-                    </div>
-                    <div className="navigationStepContainer">
-                        <div className="stepDescriptionContainer">                            
-                        </div>
-                    </div>
-                    <div className="navigationStepContainer">
-                        <div className="stepDescriptionContainer">                            
-                        </div>
-                    </div>
-                </div>
+                <Navigation step={2} />
                 <div className="formContentContainer">
+                    <div className="formHeaderContainer">
+                        <h2>Select your plan</h2>
+                        <h4>You have the option of monthly or yearly billing.</h4>
+                    </div>
                     <div className="formFieldsContainer">
     
                     </div>
                     <div className="formControlsContainer">
-                        
+                        <Link to='/personal'>Go Back</Link>
+                        <Link to='/addons'>Next</Link>
                     </div>
                 </div>
-            </div>
-            <h2>Select your plan</h2>
-            <Link to='/personal'>Go Back</Link>
-            <Link to='/addons'>Next</Link>
+            </div>   
         </>
     );
 }

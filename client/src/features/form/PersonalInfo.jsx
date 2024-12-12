@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import Navigation from "./Navigation";
 import './formStep.css';
 
 const PersonalInfo = () => {
@@ -10,35 +11,20 @@ const PersonalInfo = () => {
     return (
         <>
             <div className="mainFormContainer">
-                <div className="navigationContainer">
-                    <div className="navigationStepContainer">
-                        <div className="stepDescriptionContainer">                            
-                        </div>
-                    </div>
-                    <div className="navigationStepContainer">
-                        <div className="stepDescriptionContainer">                            
-                        </div>
-                    </div>
-                    <div className="navigationStepContainer">
-                        <div className="stepDescriptionContainer">                            
-                        </div>
-                    </div>
-                    <div className="navigationStepContainer">
-                        <div className="stepDescriptionContainer">                            
-                        </div>
-                    </div>
-                </div>
+                <Navigation step={1} />
                 <div className="formContentContainer">
+                    <div className="formHeaderContainer">
+                        <h2>Personal Info</h2>
+                        <h4>Please provide your name, email address, and phone number.</h4>
+                    </div>
                     <div className="formFieldsContainer">
     
                     </div>
                     <div className="formControlsContainer">
-                        
+                        <Link to='/plan'>Next</Link>
                     </div>
                 </div>
-            </div>
-            <h2>Personal Info</h2>
-            <Link to='/plan'>Next</Link>
+            </div> 
         </>
     );
 }
