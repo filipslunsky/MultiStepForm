@@ -17,15 +17,15 @@ const Plan = () => {
     const [selectedYearly, setSelectedYearly] = useState(plan.yearly);
 
     const handleSelctArcade = () => {
-        setSelectedPlan('arcade');
+        setSelectedPlan('Arcade');
     };
 
     const handleSelectAdvanced = () => {
-        setSelectedPlan('advanced');
+        setSelectedPlan('Advanced');
     };
 
     const handleSelectPro = () => {
-        setSelectedPlan('pro');
+        setSelectedPlan('Pro');
     };
 
     const handleSelectYearly = () => {
@@ -58,7 +58,7 @@ const Plan = () => {
                         <div className="planItemsContainer">
                             <div
                             onClick={handleSelctArcade}
-                            className={selectedPlan === "arcade" ? "planItem selectedPlanItem" : "planItem"}
+                            className={selectedPlan === "Arcade" ? "planItem selectedPlanItem" : "planItem"}
                             >
                                 <img src={arcadeIcon} alt="arcade icon" />
                                 <h5>Arcade</h5>
@@ -77,7 +77,7 @@ const Plan = () => {
                             </div>
                             <div
                             onClick={handleSelectAdvanced}
-                            className={selectedPlan === "advanced" ? "planItem selectedPlanItem" : "planItem"}
+                            className={selectedPlan === "Advanced" ? "planItem selectedPlanItem" : "planItem"}
                             >
                                 <img src={advancedIcon} alt="advanced icon" />
                                 <h5>Advanced</h5>
@@ -96,7 +96,7 @@ const Plan = () => {
                             </div>
                             <div
                             onClick={handleSelectPro}
-                            className={selectedPlan === "pro" ? "planItem selectedPlanItem" : "planItem"}
+                            className={selectedPlan === "Pro" ? "planItem selectedPlanItem" : "planItem"}
                             >
                                 <img src={proIcon} alt="pro icon" />
                                 <h5>Pro</h5>

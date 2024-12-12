@@ -7,14 +7,16 @@ const initialState = {
         phone: "",
     },
     plan: {
-        plan: "arcade",
+        plan: "Arcade",
         yearly: false,
+        planPrice: 9,
     },
     addOns: {
         onlineService: false,
         largerStorage: false,
         customizableProfile: false,
     },
+    submitted: false,
 };
 
 const formSlice = createSlice({
@@ -29,14 +31,21 @@ const formSlice = createSlice({
         submitPlanInfo: (state, action) => {
             state.plan.plan = action.payload.plan;
             state.plan.yearly = action.payload.yearly;
+            if (action.payload.plan === 'Arcade') state.plan.planPrice = 9;
+            if (action.payload.plan === 'Advanced') state.plan.planPrice = 12;
+            if (action.payload.plan === 'Pro') state.plan.planPrice = 15;
+
         },
         submitAddOnsInfo: (state, action) => {
             state.addOns.onlineService = action.payload.onlineService;
             state.addOns.largerStorage = action.payload.largerStorage;
             state.addOns.customizableProfile = action.payload.customizableProfile;
         },
+        submitForm: (state, action) => {
+            state.submitted = action.payload.submitted;
+        },
     },
 });
 
-export const { submitUserInfo, submitPlanInfo, submitAddOnsInfo } = formSlice.actions;
+export const { submitUserInfo, submitPlanInfo, submitAddOnsInfo, submitForm } = formSlice.actions;
 export default formSlice.reducer;

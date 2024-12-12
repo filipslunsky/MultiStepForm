@@ -8,6 +8,7 @@ import './formStep.css';
 const PersonalInfo = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
     const user = useSelector(state => state.form.user);
 
     const [isMissingName, setIsMissingName] = useState(false);

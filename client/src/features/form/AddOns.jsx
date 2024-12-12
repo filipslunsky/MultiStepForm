@@ -16,12 +16,6 @@ const AddOns = () => {
     const [selectedLargerStorage, setSelectedLargerStorage] = useState(addOns.largerStorage);
     const [selectedCustomizableProfile, setSelectedCustomizableProfile] = useState(addOns.customizableProfile);
 
-    console.log(addOns);
-    console.log(plan);
-    console.log(selectedOnlineService);
-    console.log(selectedLargerStorage);
-    console.log(selectedCustomizableProfile);
-
     const handleSelectOnlineService = () => {
         setSelectedOnlineService(!selectedOnlineService);
     };
