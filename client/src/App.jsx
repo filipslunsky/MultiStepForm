@@ -3,7 +3,7 @@ import PersonalInfo from "./features/form/PersonalInfo";
 import Plan from "./features/form/Plan";
 import AddOns from "./features/form/AddOns";
 import Summary from "./features/form/Summary";
-import './app.css';
+import './App.css';
 
 
 function App() {
