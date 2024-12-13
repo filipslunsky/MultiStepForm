@@ -52,15 +52,18 @@ const AddOns = () => {
                     </div>
                     <div className="formFieldsContainer">
                         <div className="addOnItemsContainer">
-                            <div className="addOnItem">
-                                <input
-                                onChange={handleSelectOnlineService}
-                                type="checkbox"
-                                checked={selectedOnlineService}
-                                />
-                                <div className='addOnDescriptionContainer'>
-                                    <h5 className='addOnTitle'>Online service</h5>
-                                    <p className='addOnDescription'>Access to multiplayer games</p>
+                            <div className={selectedOnlineService ? "addOnItem selectedAddOnItem" : "addOnItem"}>
+                                <div className="addOnLeftContainer">
+                                    <input
+                                    className='addOnCheckbox'
+                                    onChange={handleSelectOnlineService}
+                                    type="checkbox"
+                                    checked={selectedOnlineService}
+                                    />
+                                    <div className='addOnDescriptionContainer'>
+                                        <h5 className='addOnTitle'>Online service</h5>
+                                        <p className='addOnDescription'>Access to multiplayer games</p>
+                                    </div>
                                 </div>
                                 <p className='addOnPrice'>
                                     {
@@ -72,15 +75,18 @@ const AddOns = () => {
                                     }
                                 </p>
                             </div>
-                            <div className="addOnItem">
-                                <input
-                                onChange={handleSelectLargerStorage}
-                                type="checkbox"
-                                checked={selectedLargerStorage}
-                                />
-                                <div className='addOnDescriptionContainer'>
-                                    <h5 className='addOnTitle'>Larger storage</h5>
-                                    <p className='addOnDescription'>Extra 1TB of cloud save</p>
+                            <div className={selectedLargerStorage ? "addOnItem selectedAddOnItem" : "addOnItem"}>
+                                <div className="addOnLeftContainer">
+                                    <input
+                                    className='addOnCheckbox'
+                                    onChange={handleSelectLargerStorage}
+                                    type="checkbox"
+                                    checked={selectedLargerStorage}
+                                    />
+                                    <div className='addOnDescriptionContainer'>
+                                        <h5 className='addOnTitle'>Larger storage</h5>
+                                        <p className='addOnDescription'>Extra 1TB of cloud save</p>
+                                    </div>
                                 </div>
                                 <p className='addOnPrice'>
                                     {
@@ -92,15 +98,18 @@ const AddOns = () => {
                                     }
                                 </p>
                             </div>
-                            <div className="addOnItem">
-                                <input
-                                onChange={handleSelectCustomizableProfile}
-                                type="checkbox"
-                                checked={selectedCustomizableProfile}
-                                />
-                                <div className='addOnDescriptionContainer'>
-                                    <h5 className='addOnTitle'>Customizable Profile</h5>
-                                    <p className='addOnDescription'>Custom theme on your profile</p>
+                            <div className={selectedCustomizableProfile ? "addOnItem selectedAddOnItem" : "addOnItem"}>
+                                <div className="addOnLeftContainer">
+                                    <input
+                                    className='addOnCheckbox'
+                                    onChange={handleSelectCustomizableProfile}
+                                    type="checkbox"
+                                    checked={selectedCustomizableProfile}
+                                    />
+                                    <div className='addOnDescriptionContainer'>
+                                        <h5 className='addOnTitle'>Customizable Profile</h5>
+                                        <p className='addOnDescription'>Custom theme on your profile</p>
+                                    </div>
                                 </div>
                                 <p className='addOnPrice'>
                                     {
