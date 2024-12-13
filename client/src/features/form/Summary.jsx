@@ -127,7 +127,6 @@ const Summary = () => {
                         </p>
                     </div>
                 }
-                
             </div>     
         </>
     );

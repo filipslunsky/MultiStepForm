@@ -132,7 +132,7 @@ const Plan = () => {
                         <button onClick={handleNextButtonClick} className="nextButton">Next Step</button>
                     </div>
                 </div>
-            </div>   
+            </div>  
         </>
     );
 }

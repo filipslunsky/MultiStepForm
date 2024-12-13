@@ -32,3 +32,9 @@ body {
   align-items: center;
   height: 700px;
 }
+
+@media (max-width: 375px) {
+  body {
+    display: block;
+  }
+}

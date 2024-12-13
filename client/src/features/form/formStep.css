@@ -405,3 +405,95 @@ input:checked + .slider:before {
     text-align: center;
     line-height: 160%;
 }
+
+@media (max-width: 375px) {
+    .mainFormContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        width: 100%;
+        background-color: hsl(231, 100%, 99%);
+    }
+
+    .formContentContainer {
+        width: 91%;
+        height: 430px;
+        margin: 0;
+        position: absolute;
+        background-color: white;
+        top: 100px;
+        left: 4%;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(184, 184, 184, 0.1);
+    }
+
+    .formHeaderContainer {
+        width: 90%;
+        padding: 30px 0 0 20px;
+        margin-bottom: 10px;
+    }
+
+    .formFieldsContainer {
+        margin-top: 15px;
+        width: 90%;
+        padding: 5px 0 0 20px;
+    }
+
+    .textInput {
+        width: 93%;
+    }
+
+    .firstFormControlsContainer, .formControlsContainer {
+        position: relative;
+        right: 5%;
+        top: 100px;
+        background-color: white;
+        padding: 10px;
+        width: 106%;
+        margin-top: 0px;
+    }
+
+    .planItemsContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .planItem {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        height: 28px;
+    }
+
+    .planIcon {
+        margin: 8px 0 0 0;
+        width: 40px;
+    }
+
+    .periodSwitchContainer {
+        margin-top: 5px;
+        width: 92%;
+    }
+
+    .addOnItemsContainer {
+        width: 95%;
+        padding: 5px 0;
+    }
+
+    .summaryItemsContainer, .summaryBottomLine {
+        width: 87%;
+    }
+
+    .submittedContainer {
+        width: 91%;
+        height: 430px;
+        margin: 0;
+        position: absolute;
+        background-color: white;
+        top: 100px;
+        left: 4%;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(184, 184, 184, 0.1);
+    }
+}

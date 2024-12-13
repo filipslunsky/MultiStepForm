@@ -16,7 +16,7 @@
 }
 
 .stepNumberContainer {
-    border: solid 1px hsl(231, 11%, 63%);
+    border: solid 1px hsl(217, 100%, 97%);
     height: 36px;
     width: 36px;
     border-radius: 18px;
@@ -54,4 +54,23 @@
     height: 38px;
     width: 38px;
     border-radius: 19px;
+}
+
+@media (max-width: 375px) {
+    .navigationContainer {
+        background-image: url('../../assets/img/bg-sidebar-mobile.svg');
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        height: 150px;
+    }
+
+    .navigationStepContainer {
+        width: 40px;
+    }
+
+    .stepDescriptionContainer {
+        display: none;
+    }
 }
