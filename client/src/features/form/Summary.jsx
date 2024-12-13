@@ -51,7 +51,7 @@ const Summary = () => {
                     <div className="formContentContainer">
                         <div className="formHeaderContainer">
                             <h2 className='formTitle'>Finishing up</h2>
-                            <h4>Double-check everything looks OK before confirming.</h4>
+                            <h4 className='formInstruction'>Double-check everything looks OK before confirming.</h4>
                         </div>
                         <div className="formFieldsContainer">
                             <div className="summaryItemsContainer">

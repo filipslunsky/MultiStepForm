@@ -23,12 +23,15 @@
 }
 
 .formInstruction {
+    margin-top: 20px;
     font-weight: 400;
     color: hsl(231, 11%, 63%);
 }
 
 .formFieldsContainer {
     margin-top: 45px;
+    min-height: 330px;
+    
 }
 
 .textInput {
@@ -65,22 +68,114 @@
     border: 1px solid hsl(354, 84%, 57%);
 }
 
-.firstFormControlsContainer {
+.formControlsContainer, .firstFormControlsContainer {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    margin-top: 50px;
     width: 103%;
 }
 
-.nextButton {
+.formControlsContainer {
+    justify-content: space-between;
+    width: 103%;
+}
+
+.firstFormControlsContainer {
+    justify-content: flex-end;
+}
+
+.nextButton, .confirmButton {
     height: 40px;
     width: 120px;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 15px;
     color: hsl(217, 100%, 97%);
     background-color: hsl(213, 96%, 18%);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.backButton {
+    color: hsl(231, 11%, 63%);
+    height: 40px;
+    width: 120px;
+    font-weight: 400;
+    font-size: 15px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.planItemsContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 450px;
+}
+
+.planItem {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 28%;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 10px;
+    padding: 10px 20px 20px 10px;
+    margin: 8px;
+}
+
+.planIcon {
+    width: 50px;
+    margin-bottom: 30px;
+}
+
+.planName {
+    font-family: 'Ubuntu-Bold';
+    color: hsl(213, 96%, 18%);
+    font-size: 16px;
+}
+
+.planPrice {
+    color: hsl(231, 11%, 63%);
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.planPriceDiscount {
+    color: hsl(213, 96%, 18%);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.selectedPlanItem {
+    background-color: hsl(231, 100%, 99%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.periodSwitchContainer {
+    width: 95%;
+    height: 45px;
+    margin-left: 10px;
+    margin-top: 20px;
+    background-color: hsl(231, 100%, 99%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.planPeriodMonthly, .planPeriodYearly {
+    font-size: 13px;
+    margin: 0 20px;
+}
+
+.planPeriodMonthly {
+    color: hsl(231, 11%, 63%);
+    font-weight: 400;
+}
+
+.planPeriodYearly {
+    font-family: 'Ubuntu-Bold';
+    color: hsl(213, 96%, 18%);
 }
 
 /* slider styling for Plan.jsx */
@@ -90,7 +185,7 @@
     display: inline-block;
     width: 50px;
     height: 24px;
-    margin: 20px 0 0 10px;
+    margin: 20px 0 15   px 10px;
 }
 
 .switch input {
@@ -106,7 +201,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: hsl(213, 96%, 18%);
     border-radius: 34px;
     transition: 0.4s;
 }
@@ -124,7 +219,7 @@
 }
 
 input:checked + .slider {
-    background-color: #A445ED;
+    background-color: hsl(213, 96%, 18%);
 }
 
 input:checked + .slider:before {

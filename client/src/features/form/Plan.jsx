@@ -52,7 +52,7 @@ const Plan = () => {
                 <div className="formContentContainer">
                     <div className="formHeaderContainer">
                         <h2 className='formTitle'>Select your plan</h2>
-                        <h4>You have the option of monthly or yearly billing.</h4>
+                        <h4 className='formInstruction'>You have the option of monthly or yearly billing.</h4>
                     </div>
                     <div className="formFieldsContainer">
                         <div className="planItemsContainer">
@@ -60,14 +60,14 @@ const Plan = () => {
                             onClick={handleSelctArcade}
                             className={selectedPlan === "Arcade" ? "planItem selectedPlanItem" : "planItem"}
                             >
-                                <img src={arcadeIcon} alt="arcade icon" />
-                                <h5>Arcade</h5>
+                                <img className='planIcon' src={arcadeIcon} alt="arcade icon" />
+                                <h5 className='planName'>Arcade</h5>
                                 {
                                     selectedYearly
                                     ?
                                     <div className="planPriceContainer">
                                         <p className="planPrice">'$90/yr'</p>
-                                        <p>2 months free</p>
+                                        <p className='planPriceDiscount'>2 months free</p>
                                     </div>
                                     :
                                     <div className="planPriceContainer">
@@ -79,14 +79,14 @@ const Plan = () => {
                             onClick={handleSelectAdvanced}
                             className={selectedPlan === "Advanced" ? "planItem selectedPlanItem" : "planItem"}
                             >
-                                <img src={advancedIcon} alt="advanced icon" />
-                                <h5>Advanced</h5>
+                                <img className='planIcon' src={advancedIcon} alt="advanced icon" />
+                                <h5 className='planName'>Advanced</h5>
                                 {
                                     selectedYearly
                                     ?
                                     <div className="planPriceContainer">
                                         <p className="planPrice">'$120/yr'</p>
-                                        <p>2 months free</p>
+                                        <p className='planPriceDiscount'>2 months free</p>
                                     </div>
                                     :
                                     <div className="planPriceContainer">
@@ -98,14 +98,14 @@ const Plan = () => {
                             onClick={handleSelectPro}
                             className={selectedPlan === "Pro" ? "planItem selectedPlanItem" : "planItem"}
                             >
-                                <img src={proIcon} alt="pro icon" />
-                                <h5>Pro</h5>
+                                <img className='planIcon' src={proIcon} alt="pro icon" />
+                                <h5 className='planName'>Pro</h5>
                                 {
                                     selectedYearly
                                     ?
                                     <div className="planPriceContainer">
                                         <p className="planPrice">'$150/yr'</p>
-                                        <p>2 months free</p>
+                                        <p className='planPriceDiscount'>2 months free</p>
                                     </div>
                                     :
                                     <div className="planPriceContainer">
@@ -115,7 +115,7 @@ const Plan = () => {
                             </div>
                         </div>
                         <div className="periodSwitchContainer">
-                            <span className="planPeriod">monthly</span>
+                            <span className="planPeriodMonthly">Monthly</span>
                             <label className="switch">
                                 <input
                                     type="checkbox"
@@ -124,12 +124,12 @@ const Plan = () => {
                                 />
                                 <span className="slider"></span>
                             </label>
-                            <span className="planPeriod">yearly</span>
+                            <span className="planPeriodYearly">Yearly</span>
                         </div>
                     </div>
                     <div className="formControlsContainer">
                         <button onClick={handleBackButtonClick} className="backButton">Go Back</button>
-                        <button onClick={handleNextButtonClick} className="nextButton">Next</button>
+                        <button onClick={handleNextButtonClick} className="nextButton">Next Step</button>
                     </div>
                 </div>
             </div>   

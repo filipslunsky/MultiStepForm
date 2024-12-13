@@ -48,7 +48,7 @@ const AddOns = () => {
                 <div className="formContentContainer">
                     <div className="formHeaderContainer">
                         <h2 className='formTitle'>Pick add-ons</h2>
-                        <h4>Add-ons help enhance your gaming experience.</h4>
+                        <h4 className='formInstruction'>Add-ons help enhance your gaming experience.</h4>
                     </div>
                     <div className="formFieldsContainer">
                         <div className="addOnItemsContainer">
@@ -116,7 +116,7 @@ const AddOns = () => {
                     </div>
                     <div className="formControlsContainer">
                         <button onClick={handleBackButtonClick} className="backButton">Go Back</button>
-                        <button onClick={handleNextButtonClick} className="nextButton">Next</button>
+                        <button onClick={handleNextButtonClick} className="nextButton">Next Step</button>
                     </div>
                 </div>
             </div>   
