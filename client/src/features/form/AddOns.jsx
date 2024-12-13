@@ -47,7 +47,7 @@ const AddOns = () => {
                 <Navigation step={3} />
                 <div className="formContentContainer">
                     <div className="formHeaderContainer">
-                        <h2>Pick add-ons</h2>
+                        <h2 className='formTitle'>Pick add-ons</h2>
                         <h4>Add-ons help enhance your gaming experience.</h4>
                     </div>
                     <div className="formFieldsContainer">

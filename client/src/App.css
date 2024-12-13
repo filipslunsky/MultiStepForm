@@ -26,4 +26,8 @@
 body {
   font-family: 'Ubuntu-Regular';
   background-color: hsl(231, 100%, 99%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
 }

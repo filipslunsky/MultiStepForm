@@ -15,7 +15,8 @@ const Navigation = ({step}) => {
                                     {item}
                                 </div>
                                 <div className="stepDescriptionContainer">
-                                    {stepDescArr[index]}                            
+                                    <h4 className='stepDescriptionName'>STEP {item}</h4>
+                                    <p className='stepDescriptionValue'>{stepDescArr[index]}</p>                            
                                 </div>
                             </div>
                         )

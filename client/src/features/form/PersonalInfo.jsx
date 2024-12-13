@@ -45,8 +45,8 @@ const PersonalInfo = () => {
                 <Navigation step={1} />
                 <div className="formContentContainer">
                     <div className="formHeaderContainer">
-                        <h2>Personal Info</h2>
-                        <h4>Please provide your name, email address, and phone number.</h4>
+                        <h2 className='formTitle'>Personal Info</h2>
+                        <h4 className='formInstruction'>Please provide your name, email address, and phone number.</h4>
                     </div>
                     <div className="formFieldsContainer">
                         <div className={isMissingName ? 'alertLableContainer' : 'lableContainer'}>
@@ -59,7 +59,14 @@ const PersonalInfo = () => {
                                 ''
                             }
                         </div>
-                        <input ref={nameRef} defaultValue={user.name} className='textInput' type="text" name="name" placeholder='e.g. Stephen King' />
+                        <input
+                        ref={nameRef}
+                        defaultValue={user.name}
+                        className={isMissingName ? 'textInput textInputAlert' : 'textInput'}
+                        type="text"
+                        name="name"
+                        placeholder='e.g. Stephen King'
+                        />
                         <div className={isMissingEmail ? 'alertLableContainer' : 'lableContainer'}>
                             <p className='textInputLable'>Email</p>
                             {
@@ -70,7 +77,14 @@ const PersonalInfo = () => {
                                 ''
                             }
                         </div>
-                        <input ref={emailRef} defaultValue={user.email} className='textInput' type="text" name="email" placeholder='e.g. stephenking@lorem.com' />
+                        <input
+                        ref={emailRef}
+                        defaultValue={user.email}
+                        className={isMissingEmail ? 'textInput textInputAlert' : 'textInput'}
+                        type="text"
+                        name="email"
+                        placeholder='e.g. stephenking@lorem.com'
+                        />
                         <div className={isMissingPhone ? 'alertLableContainer' : 'lableContainer'}>
                             <p className='textInputLable'>Phone</p>
                             {
@@ -81,10 +95,17 @@ const PersonalInfo = () => {
                                 ''
                             }
                         </div>
-                        <input ref={phoneRef} defaultValue={user.phone} className='textInput' type="text" name="phone" placeholder='e.g. +1 234 567 890' />
+                        <input
+                        ref={phoneRef}
+                        defaultValue={user.phone}
+                        className={isMissingPhone ? 'textInput textInputAlert' : 'textInput'}
+                        type="text"
+                        name="phone"
+                        placeholder='e.g. +1 234 567 890'
+                        />
                     </div>
-                    <div className="formControlsContainer">
-                        <button onClick={handleNextButtonClick} className='nextButton'>Next</button>                        
+                    <div className="firstFormControlsContainer">
+                        <button onClick={handleNextButtonClick} className='nextButton'>Next Step</button>                        
                     </div>
                 </div>
             </div> 

@@ -32,12 +32,6 @@ const Summary = () => {
 
     const fullPrice = getFullPrice();
 
-    console.log(plan);
-    console.log(addOns);
-    console.log(selectSubmitted);
-    console.log(fullPrice);
-    
-
     const handleSubmit = () => {
         setSelectSubmitted(true);
         dispatch(submitForm({submitted: selectSubmitted}));
@@ -56,7 +50,7 @@ const Summary = () => {
                     ?
                     <div className="formContentContainer">
                         <div className="formHeaderContainer">
-                            <h2>Finishing up</h2>
+                            <h2 className='formTitle'>Finishing up</h2>
                             <h4>Double-check everything looks OK before confirming.</h4>
                         </div>
                         <div className="formFieldsContainer">

@@ -1,3 +1,88 @@
+.mainFormContainer {
+    display: flex;
+    height: 570px;
+    width: 900px;
+    padding: 10px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+}
+
+.formContentContainer {
+    margin: 40px 0 0 60px;
+}
+
+.formHeaderContainer {
+    margin-bottom: 40px;
+}
+
+.formTitle {
+    font-family: 'Ubuntu-Bold';
+    font-weight: 700;
+    font-size: 32px;
+    color: hsl(213, 96%, 18%);
+}
+
+.formInstruction {
+    font-weight: 400;
+    color: hsl(231, 11%, 63%);
+}
+
+.formFieldsContainer {
+    margin-top: 45px;
+}
+
+.textInput {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid hsl(229, 24%, 87%);
+}
+
+.lableContainer {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.textInputLable {
+    color: hsl(213, 96%, 18%);
+}
+
+.alertLableContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.alertLable {
+    color: hsl(354, 84%, 57%);
+    font-size: 14px;
+}
+
+.textInputAlert {
+    border: 1px solid hsl(354, 84%, 57%);
+}
+
+.firstFormControlsContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 50px;
+    width: 103%;
+}
+
+.nextButton {
+    height: 40px;
+    width: 120px;
+    font-weight: 600;
+    color: hsl(217, 100%, 97%);
+    background-color: hsl(213, 96%, 18%);
+    border: none;
+    border-radius: 5px;
+}
+
 /* slider styling for Plan.jsx */
 
 .switch {

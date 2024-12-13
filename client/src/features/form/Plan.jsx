@@ -51,7 +51,7 @@ const Plan = () => {
                 <Navigation step={2} />
                 <div className="formContentContainer">
                     <div className="formHeaderContainer">
-                        <h2>Select your plan</h2>
+                        <h2 className='formTitle'>Select your plan</h2>
                         <h4>You have the option of monthly or yearly billing.</h4>
                     </div>
                     <div className="formFieldsContainer">
