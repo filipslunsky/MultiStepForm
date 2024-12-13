@@ -56,12 +56,14 @@ const Summary = () => {
                         <div className="formFieldsContainer">
                             <div className="summaryItemsContainer">
                                 <div className="summaryPlanContainer">
-                                    <h3>{plan.plan}{plan.yearly ? ' (Yearly)' : ' (Monthly)'}</h3>
-                                    <Link to='/plan'>Change</Link>
+                                    <div className="summaryPlanLeftContainer">
+                                        <h3 className='summaryPlanName'>{plan.plan}{plan.yearly ? ' (Yearly)' : ' (Monthly)'}</h3>
+                                        <Link className='summaryChangeLink' to='/plan'>Change</Link>
+                                    </div>
+                                    <h3 className='summaryPlanPrice'>
+                                        ${plan.planPrice}{plan.yearly ? '0' : ''}/{plan.yearly ? 'yr' : 'mo'}
+                                    </h3>
                                 </div>
-                                <h3 className='summaryPlanPrice'>
-                                    ${plan.planPrice}{plan.yearly ? '0' : ''}/{plan.yearly ? 'yr' : 'mo'}
-                                </h3>
                                 {
                                     addOns.onlineService
                                     ?
